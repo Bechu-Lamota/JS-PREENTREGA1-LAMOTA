@@ -1,5 +1,3 @@
-
-
 let edad = parseInt(prompt("edad"));
 
 if (edad < 16) {
