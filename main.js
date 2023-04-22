@@ -8,10 +8,6 @@ if (edad < 16) {
 	alert("adelante");
 }
 
-
-
-
-
 function calculadora(num1, num2, operacion) {
 	switch (operacion) {
 		case "+":
