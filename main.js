@@ -95,7 +95,7 @@ function igUs() {
 igUs();
 
 //Por ultimo, propongo un ejercicio
-alert("FrostY, es una empresa dedicada a la elaboración de yogur helado. Se encuentra con un problema en el centro de ENVASADO: Del yogur se pierde el 8% y el 15% de los yogures envasados se rompe y el costo de conversion es de $40/u. ");
+alert(`FrostY, es una empresa dedicada a la elaboración de yogur helado. Se encuentra con un problema en el centro de ENVASADO: Del yogur se pierde el 8% y el 15% de los yogures envasados se rompe y el costo de conversion es de $40/u.`);
 
 const productos = [
 	{ codigo: 1, pd: "Yogur", precio: 210.53, q: 0.171, total: 49.81 },
