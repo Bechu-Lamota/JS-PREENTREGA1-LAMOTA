@@ -1,8 +1,9 @@
 //ENTREGA 3
 document.addEventListener("DOMContentLoaded", function() {
+	let txtFormulario = document.getElementById("l-side");
 	let miForm = document.getElementById("miForm")
 	let msjThanks = document.getElementById("msjThanks");
-	
+
 	miForm.addEventListener("submit", function (event) {
 		event.preventDefault();
 		// Evito que se envíen los datos automáticamente.
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		console.log(usuarios);
 
 		//esto va a mostrar el mensaje de agradecimiento y oculta el formulario
+		txtFormulario.style.display = "none";
 		miForm.style.display = "none";
 		msjThanks.style.display = "block";
 		
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}, 5000);
 
 		function visibleFormulario() {
+			txtFormulario.style.display = "block";
 			msjThanks.style.display = "none";
 			miForm.style.display = "block";
 			miForm.reset();
