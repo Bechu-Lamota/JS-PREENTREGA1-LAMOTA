@@ -22,5 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		console.log(`Datos Almacenados en localStorage:`);
 		console.log(usuarios);
+
+		//Reinicio del formulario
+		miForm.reset();
 	});
 });
+
