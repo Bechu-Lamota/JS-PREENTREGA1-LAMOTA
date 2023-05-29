@@ -1,6 +1,9 @@
 //ENTREGA 3
 document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById("miForm").addEventListener("submit", function (event) {
+	let miForm = document.getElementById("miForm")
+	let msjThanks = document.getElementById("msjThanks");
+	
+	miForm.addEventListener("submit", function (event) {
 		event.preventDefault();
 		// Evito que se envíen los datos automáticamente.
 
@@ -18,13 +21,27 @@ document.addEventListener("DOMContentLoaded", function() {
 			contraseña: contraseña
 		};
 
+		//Los carga agrupados
 		localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
+		//Aca visualizamos los datos cargados
 		console.log(`Datos Almacenados en localStorage:`);
 		console.log(usuarios);
 
-		//Reinicio del formulario
-		miForm.reset();
+		//esto va a mostrar el mensaje de agradecimiento y oculta el formulario
+		miForm.style.display = "none";
+		msjThanks.style.display = "block";
+		
+		//El formulario se reinicia despues de 5 que se muestra un agradecimiento.
+		setTimeout(function () {
+			visibleFormulario();
+		}, 5000);
+
+		function visibleFormulario() {
+			msjThanks.style.display = "none";
+			miForm.style.display = "block";
+			miForm.reset();
+		}
 	});
 });
 
